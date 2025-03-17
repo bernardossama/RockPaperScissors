@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0 ;
+}
+
+:root{
+    /* FONT */
+    --FF: "Barriecito", system-ui;
+    --FS: 2rem;
+    --FS-S: 1.5rem;
+
+    /* COLORS */
+    --COLOR-LIGHT: #DDD;
+    --COLOR-DARK: #222;
+    --COLOR-ACCENT: darkred;
+}
+
+body{
+    font-family: var(--FF);
+    background-color: var(--COLOR-DARK);
+    color:var(--COLOR-LIGHT);
+    margin: auto;
+    align-content: center;
+    text-align: center;
+}
+
+.header{
+    background-color: var(--COLOR-LIGHT);
+    color: var(--COLOR-DARK);
+    padding: 1rem;
+    font-size: var(--FS);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.player, .computer{
+    font-size: var(--FS);
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.form{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.form input{
+    height: 3rem;
+    border-radius: var(--FS);
+    font-family: var(--FF);
+    font-size: var(--FS);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form button{
+    height: var(--FS);
+    width: 8rem;
+    font-family: var(--FF);
+    font-size: 1.5rem;
+    background-color: var(--COLOR-LIGHT);
+    color: var(--COLOR-ACCENT);
+    border: 2px var(--COLOR-ACCENT) solid;
+    border-radius: var(--FS);
+}
+
+.computer h3{
+    color: var(--COLOR-ACCENT)
+}
+
+.winner{
+    font-size: var(--FS);
+}
+
+
+.footer{
+    position:fixed;
+    bottom: 0;
+}
