@@ -17,6 +17,23 @@ function generateComputerChoice() {
   return result;
 }
 
+function checkPlayerInput() {
+  const playerInput = userInput.value.toString().toLowerCase();
+  if (
+    playerInput !== "rock" &&
+    playerInput !== "paper" &&
+    playerInput !== "scissors"
+  ) {
+    console.log(playerInput);
+    console.log('invalid input');
+    userInput.style.border = "2px solid red";
+    return false;
+  } else {
+    userInput.style.border = "1px solid #222";
+    return true;
+  }
+}
+
 function decideWinner() {
   const playerChoice = userInput.value.toString().toLowerCase();
   const computerChoice = generateComputerChoice().toLowerCase();
@@ -38,4 +55,11 @@ function decideWinner() {
   winner.textContent = gameResult;
 }
 
-submitBtn.addEventListener("click", decideWinner);
+function gameLogic() {
+  const isInputValid = checkPlayerInput();
+  if (isInputValid) {
+    decideWinner();
+  }
+}
+
+submitBtn.addEventListener("click", gameLogic);
