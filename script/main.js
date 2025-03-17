@@ -24,8 +24,6 @@ function checkPlayerInput() {
     playerInput !== "paper" &&
     playerInput !== "scissors"
   ) {
-    console.log(playerInput);
-    console.log("invalid input");
     userInput.style.border = "2px solid red";
     return false;
   } else {
