@@ -54,6 +54,7 @@ body{
     font-size: var(--FS);
     text-align: center;
     margin-bottom: 10px;
+    border: none;
 }
 
 .form button{

@@ -25,11 +25,11 @@ function checkPlayerInput() {
     playerInput !== "scissors"
   ) {
     console.log(playerInput);
-    console.log('invalid input');
+    console.log("invalid input");
     userInput.style.border = "2px solid red";
     return false;
   } else {
-    userInput.style.border = "1px solid #222";
+    userInput.style.border = "none";
     return true;
   }
 }
