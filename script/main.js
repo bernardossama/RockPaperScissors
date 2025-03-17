@@ -1,7 +1,7 @@
 const userInput = document.getElementById("playerChoice");
 const submitBtn = document.getElementById("submitBtn");
 const computerInput = document.getElementById("computerChoice");
-const winner = document.getElementById('winnerText');
+const winner = document.getElementById("winnerText");
 
 function generateComputerChoice() {
   const randomNumber = Math.floor(Math.random() * 3 + 1);
@@ -28,16 +28,14 @@ function decideWinner() {
     (playerChoice === "scissors" && computerChoice === "rock")
   ) {
     gameResult = "You Lose";
-  } else if (playerChoice===computerChoice) {
+  } else if (playerChoice === computerChoice) {
     gameResult = "It's a tie!";
   } else {
-    gameResult='You Win!'
+    gameResult = "You Win!";
   }
 
-  computerInput.textContent=computerChoice.toLocaleUpperCase();
-  winner.textContent=gameResult;
-
-
+  computerInput.textContent = computerChoice.toLocaleUpperCase();
+  winner.textContent = gameResult;
 }
 
 submitBtn.addEventListener("click", decideWinner);
