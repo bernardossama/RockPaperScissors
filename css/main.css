@@ -81,3 +81,24 @@ body{
     position:fixed;
     bottom: 0;
 }
+
+
+.buttonChoice{
+    height: 8rem;
+    width: 8rem;
+    background-color: var(--COLOR-DARK);
+    border: 5px solid var(--COLOR-ACCENT);
+    border-radius: 25%;
+
+}
+
+.buttonChoice :hover {
+    background-color: gray;
+    box-shadow: #222;
+
+}
+
+.imageChoice{
+    height: 4rem;
+    width: auto;
+}
