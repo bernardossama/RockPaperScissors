@@ -90,14 +90,10 @@ body{
     background-color: var(--COLOR-DARK);
     border: 5px solid var(--COLOR-ACCENT);
     border-radius: 25%;
-    box-sizing: content-box;
-
 }
 
-button :hover {
+.buttonChoice :hover {
     background-color: gray !important;
-    box-shadow: #222;
-
 }
 
 .imageChoice{

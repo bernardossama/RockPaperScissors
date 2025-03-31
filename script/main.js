@@ -60,8 +60,6 @@ scissorsButton.addEventListener("click", () => {
   decideWinner("scissors");
 });
 
-paperButton.addEventListener()
-
 const footerText = document.getElementById("footer-text");
 const year = new Date().getFullYear();
 footerText.innerHTML = `<p>&#169; Bernard Ossama - ${year}</p>`;
