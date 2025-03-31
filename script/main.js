@@ -32,8 +32,7 @@ function checkPlayerInput() {
   }
 }
 
-function decideWinner() {
-  const playerChoice = userInput.value.toString().toLowerCase();
+function decideWinner(playerChoice) {
   const computerChoice = generateComputerChoice().toLowerCase();
   let gameResult = "";
 
@@ -53,12 +52,15 @@ function decideWinner() {
   winner.textContent = gameResult;
 }
 
-function gameLogic() {
-  const isInputValid = checkPlayerInput();
-  if (isInputValid) {
-    decideWinner();
-  }
-}
+document
+  .getElementById("rock-btn")
+  .addEventListener("click", () => decideWinner("rock"));
+document
+  .getElementById("paper-btn")
+  .addEventListener("click", () => decideWinner("paper"));
+document
+  .getElementById("scissors-btn")
+  .addEventListener("click", () => decideWinner("scissors"));
 
 submitBtn.addEventListener("click", gameLogic);
 
