@@ -1,7 +1,9 @@
-const userInput = document.getElementById("playerChoice");
-const submitBtn = document.getElementById("submitBtn");
 const computerInput = document.getElementById("computerChoice");
 const winner = document.getElementById("winnerText");
+
+const rockButton= document.getElementById('rock-btn');
+const paperButton = document.getElementById('paper-btn');
+const scissorsButton=document.getElementById('scissors-btn');
 
 function generateComputerChoice() {
   const randomNumber = Math.floor(Math.random() * 3 + 1);
@@ -15,21 +17,6 @@ function generateComputerChoice() {
   }
 
   return result;
-}
-
-function checkPlayerInput() {
-  const playerInput = userInput.value.toString().toLowerCase();
-  if (
-    playerInput !== "rock" &&
-    playerInput !== "paper" &&
-    playerInput !== "scissors"
-  ) {
-    userInput.style.border = "2px solid red";
-    return false;
-  } else {
-    userInput.style.border = "none";
-    return true;
-  }
 }
 
 function decideWinner(playerChoice) {
@@ -52,17 +39,28 @@ function decideWinner(playerChoice) {
   winner.textContent = gameResult;
 }
 
-document
-  .getElementById("rock-btn")
-  .addEventListener("click", () => decideWinner("rock"));
-document
-  .getElementById("paper-btn")
-  .addEventListener("click", () => decideWinner("paper"));
-document
-  .getElementById("scissors-btn")
-  .addEventListener("click", () => decideWinner("scissors"));
+rockButton.addEventListener("click", () => {
+  rockButton.classList.add('clicked');
+  paperButton.classList.remove('clicked');
+  scissorsButton.classList.remove('clicked');
+  decideWinner("rock");
+});
 
-submitBtn.addEventListener("click", gameLogic);
+paperButton.addEventListener("click", () => {
+  rockButton.classList.remove('clicked');
+  paperButton.classList.add('clicked');
+  scissorsButton.classList.remove('clicked');
+  decideWinner("paper");
+});
+
+scissorsButton.addEventListener("click", () => {
+  rockButton.classList.remove('clicked');
+  paperButton.classList.remove('clicked');
+  scissorsButton.classList.add('clicked');
+  decideWinner("scissors");
+});
+
+paperButton.addEventListener()
 
 const footerText = document.getElementById("footer-text");
 const year = new Date().getFullYear();
