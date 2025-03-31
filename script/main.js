@@ -61,3 +61,7 @@ function gameLogic() {
 }
 
 submitBtn.addEventListener("click", gameLogic);
+
+const footerText = document.getElementById("footer-text");
+const year = new Date().getFullYear();
+footerText.innerHTML = `<p>&#169; Bernard Ossama - ${year}</p>`;
