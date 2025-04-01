@@ -83,6 +83,10 @@ body{
     bottom: 0;
 }
 
+.playerChoiceDiv{
+    margin-top: 1rem;
+}
+
 
 .buttonChoice{
     height: 8rem;
@@ -92,12 +96,9 @@ body{
     border-radius: 25%;
 }
 
-.buttonChoice :hover {
-    background-color: gray !important;
-}
 
 .imageChoice{
-    height: 4rem;
+    height: 50%;
     width: auto;
 }
 

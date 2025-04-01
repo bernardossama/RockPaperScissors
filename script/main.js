@@ -1,9 +1,9 @@
 const computerInput = document.getElementById("computerChoice");
 const winner = document.getElementById("winnerText");
 
-const rockButton= document.getElementById('rock-btn');
-const paperButton = document.getElementById('paper-btn');
-const scissorsButton=document.getElementById('scissors-btn');
+const rockButton = document.getElementById("rock-btn");
+const paperButton = document.getElementById("paper-btn");
+const scissorsButton = document.getElementById("scissors-btn");
 
 function generateComputerChoice() {
   const randomNumber = Math.floor(Math.random() * 3 + 1);
@@ -40,23 +40,23 @@ function decideWinner(playerChoice) {
 }
 
 rockButton.addEventListener("click", () => {
-  rockButton.classList.add('clicked');
-  paperButton.classList.remove('clicked');
-  scissorsButton.classList.remove('clicked');
+  rockButton.classList.add("clicked");
+  paperButton.classList.remove("clicked");
+  scissorsButton.classList.remove("clicked");
   decideWinner("rock");
 });
 
 paperButton.addEventListener("click", () => {
-  rockButton.classList.remove('clicked');
-  paperButton.classList.add('clicked');
-  scissorsButton.classList.remove('clicked');
+  rockButton.classList.remove("clicked");
+  paperButton.classList.add("clicked");
+  scissorsButton.classList.remove("clicked");
   decideWinner("paper");
 });
 
 scissorsButton.addEventListener("click", () => {
-  rockButton.classList.remove('clicked');
-  paperButton.classList.remove('clicked');
-  scissorsButton.classList.add('clicked');
+  rockButton.classList.remove("clicked");
+  paperButton.classList.remove("clicked");
+  scissorsButton.classList.add("clicked");
   decideWinner("scissors");
 });
 
