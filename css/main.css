@@ -29,7 +29,7 @@ body{
 
 .header{
     background-color: var(--COLOR-LIGHT);
-    color: var(--COLOR-DARK);
+    color: var(--COLOR-ACCENT);
     padding: 1rem;
     font-size: var(--FS);
     margin-bottom: 1rem;
@@ -41,13 +41,14 @@ body{
     margin-top: 5rem;
     margin-bottom: 5rem;
 }
-
+/* 
 .form{
     display: flex;
     flex-flow: column;
-    align-items: center;
-}
-.form input{
+    align-items: center; 
+}*/
+
+/* .form input{
     height: 3rem;
     border-radius: var(--FS);
     font-family: var(--FF);
@@ -55,8 +56,8 @@ body{
     text-align: center;
     margin-bottom: 10px;
     border: none;
-}
-
+} */
+/* 
 .form button{
     height: var(--FS);
     width: 8rem;
@@ -66,7 +67,7 @@ body{
     color: var(--COLOR-ACCENT);
     border: 2px var(--COLOR-ACCENT) solid;
     border-radius: var(--FS);
-}
+} */
 
 .computer h3{
     color: var(--COLOR-ACCENT)
@@ -80,4 +81,26 @@ body{
 .footer{
     position:fixed;
     bottom: 0;
+}
+
+
+.buttonChoice{
+    height: 8rem;
+    width: 8rem;
+    background-color: var(--COLOR-DARK);
+    border: 5px solid var(--COLOR-ACCENT);
+    border-radius: 25%;
+}
+
+.buttonChoice :hover {
+    background-color: gray !important;
+}
+
+.imageChoice{
+    height: 4rem;
+    width: auto;
+}
+
+.clicked{
+    background-color: var(--COLOR-LIGHT) !important;
 }
