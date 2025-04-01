@@ -9,7 +9,7 @@
 :root{
     /* FONT */
     --FF: "Barriecito", system-ui;
-    --FS: 1rem
+    --FS: 1rem;
     --FS-S: 0.75rem;
 
     /* COLORS */
