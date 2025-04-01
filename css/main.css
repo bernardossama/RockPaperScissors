@@ -9,8 +9,8 @@
 :root{
     /* FONT */
     --FF: "Barriecito", system-ui;
-    --FS: 2rem;
-    --FS-S: 1.5rem;
+    --FS: 1rem
+    --FS-S: 0.75rem;
 
     /* COLORS */
     --COLOR-LIGHT: #DDD;
